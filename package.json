@@ -1,0 +1,32 @@
+{
+  "name": "Webmastering",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaryaMarkova/WebmasteringBasic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaryaMarkova/WebmasteringBasic/issues"
+  },
+  "homepage": "https://github.com/DaryaMarkova/WebmasteringBasic#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.4",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^1.5.0",
+    "node-sass": "^5.0.0",
+    "resolve-url-loader": "^3.1.2",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.34.0",
+    "webpack-cli": "^4.6.0"
+  }
+}
