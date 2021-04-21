@@ -1,6 +1,6 @@
 const path = require('path');
-const miniCss = require('mini-css-extract-plugin');
-
+const MiniCss = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -12,7 +12,7 @@ module.exports = {
         rules: [{
             test: /\.(s*)css$/,
             use: [
-                miniCss.loader,
+                MiniCss.loader,
                 'css-loader',
                 'sass-loader',
                 'resolve-url-loader'
@@ -41,16 +41,22 @@ module.exports = {
                 }
               }
             ]
-          }]
+          }
+        ]
     },
     plugins: [
-        new miniCss({
+        new MiniCss({
             filename: 'style.css',
         }),
+        new CopyPlugin({
+          patterns: [
+            { from: "src/img", to: "images" },
+          ],
+        })
     ],
     resolve: {
         alias: {
-            assets: path.resolve(__dirname, 'src')
+          assets: path.resolve(__dirname, 'src')
         }
     }
 };
