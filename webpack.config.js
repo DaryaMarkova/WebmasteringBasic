@@ -1,62 +1,77 @@
 const path = require('path');
 const MiniCss = require('mini-css-extract-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
-    entry: './src/index.js',
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
-    },
-    module: {
-        rules: [{
-            test: /\.(s*)css$/,
-            use: [
-                MiniCss.loader,
-                'css-loader',
-                'sass-loader',
-                'resolve-url-loader'
-            ]
-        }, 
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [{
+      test: /\.(s*)css$/,
+      use: [
+        MiniCss.loader,
+        'css-loader',
+        'sass-loader',
+        'resolve-url-loader',
         {
-            test: /\.(png|jpe?g|gif)$/i,
-            use: [
-              {
-                loader: 'file-loader',
-                options: {
-                  name: '[name].[ext]',
-                  outputPath: 'images/'
-                }
-              },
-            ],
-          },
-          {
-            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-            use: [
-              {
-                loader: 'file-loader',
-                options: {
-                  name: '[name].[ext]',
-                  outputPath: 'fonts/'
-                }
-              }
-            ]
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: [
+                autoprefixer({
+                  browsers: ['ie >= 8', 'last 4 version']
+                })
+              ]
+            },
+            sourceMap: true
           }
-        ]
-    },
-    plugins: [
-        new MiniCss({
-            filename: 'style.css',
-        }),
-        new CopyPlugin({
-          patterns: [
-            { from: "src/img", to: "images" },
-          ],
-        })
-    ],
-    resolve: {
-        alias: {
-          assets: path.resolve(__dirname, 'src')
         }
+      ]
+    },
+    {
+      test: /\.(png|jpe?g|gif)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/'
+          }
+        },
+      ],
+    },
+    {
+      test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          }
+        }
+      ]
     }
+    ]
+  },
+  plugins: [
+    new MiniCss({
+      filename: 'style.css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "src/img", to: "images" },
+      ],
+    })
+  ],
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, 'src')
+    }
+  },
+  watch: true
 };
