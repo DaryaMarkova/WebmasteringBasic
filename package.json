@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack --watch"
+    "start": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "copy-webpack-plugin": "^8.1.1",
     "css-loader": "^5.2.4",
     "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.5.0",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.12",
@@ -32,10 +33,7 @@
     "resolve-url-loader": "^3.1.2",
     "sass-loader": "^11.0.1",
     "webpack": "^5.34.0",
-    "webpack-cli": "^4.6.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 3 version"
-  ]
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
 }

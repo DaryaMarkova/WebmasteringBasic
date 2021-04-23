@@ -1,12 +1,22 @@
 const path = require('path');
 const MiniCss = require('mini-css-extract-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.js', // точка входа в приложение
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    historyApiFallback: true,
+    open: true,
+    hot: true,
+    port: 8888
   },
   module: {
     rules: [{
@@ -64,12 +74,17 @@ module.exports = {
       patterns: [
         { from: "src/img", to: "images" },
       ],
-    })
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Extraodinary',
+      template: path.resolve(__dirname, 'dist', 'page.html')
+    }),
+    new HotModuleReplacementPlugin()
   ],
   resolve: {
     alias: {
       assets: path.resolve(__dirname, 'src')
     }
   },
-  watch: true
+  // watch: true
 };
