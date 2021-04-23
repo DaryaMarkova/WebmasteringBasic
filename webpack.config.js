@@ -1,8 +1,6 @@
 const path = require('path');
 const MiniCss = require('mini-css-extract-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
-const autoprefixer = require('autoprefixer');
-const { webpack } = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -16,7 +14,6 @@ module.exports = {
       use: [
         MiniCss.loader,
         'css-loader',
-        'sass-loader',
         {
           loader: "postcss-loader",
           options: {
@@ -29,6 +26,7 @@ module.exports = {
             },
           },
         },
+        'sass-loader',
         'resolve-url-loader'
       ]
     },

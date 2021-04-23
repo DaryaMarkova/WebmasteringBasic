@@ -1,4 +1,4 @@
-@import url('./header.scss');
+@import '~assets/scss/header.scss';
 
 body {
     margin: 0;
@@ -14,8 +14,4 @@ body {
 @font-face {
     font-family: "Montserrat-Regular";
     src: url("./../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
-}
-// ONLY WORK FOR app.scss
-.test_autoprefixer {
-    transition: all 4s ease;
 }
