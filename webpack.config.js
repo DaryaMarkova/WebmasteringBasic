@@ -1,8 +1,10 @@
 const path = require('path');
 const MiniCss = require('mini-css-extract-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
+
+// const mode = process.env.NODE_ENV || "development";
+const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
 
 module.exports = {
   entry: './src/index.js', // точка входа в приложение
@@ -12,12 +14,10 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    historyApiFallback: true,
-    open: true,
-    hot: true,
-    port: 8888
+    contentBase: path.resolve(__dirname, 'dist')
   },
+  target: target,
+  // mode: mode,
   module: {
     rules: [{
       test: /\.(s*)css$/,
@@ -79,7 +79,7 @@ module.exports = {
     //   title: 'Extraodinary',
     //   template: path.resolve(__dirname, 'src', 'index.html')
     // }),
-    new HotModuleReplacementPlugin()
+    // new HotModuleReplacementPlugin()
   ],
   resolve: {
     alias: {
