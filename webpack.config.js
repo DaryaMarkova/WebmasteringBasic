@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCss = require('mini-css-extract-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
 
 module.exports = {
@@ -71,10 +72,10 @@ module.exports = {
         { from: "src/img", to: "images" },
       ],
     }),
-    // new HtmlWebpackPlugin({
-    //   title: 'Extraodinary',
-    //   template: path.resolve(__dirname, 'src', 'index.html')
-    // }),
+    new HtmlWebpackPlugin({
+      title: 'Extraodinary',
+      template: path.resolve(__dirname, 'src', 'index.html')
+    }),
     // new HotModuleReplacementPlugin()
   ],
   resolve: {
