@@ -1,13 +1,10 @@
 const path = require('path');
 const MiniCss = require('mini-css-extract-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
-const { HotModuleReplacementPlugin } = require('webpack');
-
-// const mode = process.env.NODE_ENV || "development";
 const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
 
 module.exports = {
-  entry: './src/index.js', // точка входа в приложение
+  entry: './src/index.js', 
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -17,7 +14,6 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist')
   },
   target: target,
-  // mode: mode,
   module: {
     rules: [{
       test: /\.(s*)css$/,
@@ -36,7 +32,7 @@ module.exports = {
             },
           },
         },
-        'sass-loader',
+        // 'sass-loader',
         'resolve-url-loader'
       ]
     },
