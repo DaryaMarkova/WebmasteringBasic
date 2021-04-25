@@ -48,12 +48,12 @@
 .header-section__search {
     box-sizing: content-box;
     padding: 0px 40px;
-    background: center no-repeat url('./../img/search_icon.png');
+    background: center no-repeat url('assets/img/search_icon.png');
     border-right: 1px solid rgba(82, 82, 82, 0.2);
 }
 .header-section__login {
     padding: 40px;
-    background: center no-repeat url('./../img/user_icon.png');
+    background: center no-repeat url('assets/img/user_icon.png');
 }
 
 .header-section__share-menu {
@@ -85,11 +85,28 @@
     color: #323232;
     font-size: 13px;
     text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
 .header-section__share-menuitem {
     height: 44px;
     border-bottom: 1px solid #e7e7e7;
+}
+
+.header-section__share-menuitem--icon.facebook {
+    background: center no-repeat url('assets/img/facebook_icon.png');
+}
+
+.header-section__share-menuitem--icon.twitter {
+    background: center no-repeat url('assets/img/twitter_icon.png');
+}
+
+.header-section__share-menuitem--icon.google {
+    background: center no-repeat url('assets/img/google_icon.png');
+}
+
+.header-section__share-menuitem--icon.pinterest {
+    background: center no-repeat url('assets/img/pinterest_icon.png');
 }
 
 .header-section__share:hover {
