@@ -34,6 +34,34 @@
     visibility: hidden;
     transition: all 0.1s ease-out;
 }
+.navigation-menu__list-item .navigation-menu__listitem-selected::before {
+    content: '';
+    position: absolute;
+    width: 68px;
+    height: 68px;
+}
+
+.navigation-menu__list-item.graphic .navigation-menu__listitem-selected::before {
+    background: center no-repeat url('assets/img/whitepalette_icon.png');
+}
+.navigation-menu__list-item.music .navigation-menu__listitem-selected::before {
+    background: center no-repeat url('assets/img/whitemusic_icon.png');
+}
+.navigation-menu__list-item.photography .navigation-menu__listitem-selected::before {
+    background: center no-repeat url('assets/img/whitecamera_icon.png');
+}
+.navigation-menu__list-item.travel .navigation-menu__listitem-selected::before {
+    background: center no-repeat url('assets/img/whiteairplane_icon.png');
+}
+.navigation-menu__list-item.fashion .navigation-menu__listitem-selected::before {
+    background: center no-repeat url('assets/img/whitebag_icon.png');
+}
+.navigation-menu__list-item.business .navigation-menu__listitem-selected::before {
+    background: center no-repeat url('assets/img/whitesuitcase_icon.png');
+}
+.navigation-menu__list-item.cinema .navigation-menu__listitem-selected::before {
+    background: center no-repeat url('assets/img/whitevideo_icon.png');
+}
 
 .navigation-menu__list-item:hover > .navigation-menu__listitem-selected  {
     visibility: visible;
