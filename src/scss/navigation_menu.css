@@ -1,6 +1,7 @@
 .navigation-menu {
     position: fixed;
     top: 77px;
+    left: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,8 +9,8 @@
     min-height: calc(100% - 70px);
     background-color: #fbfbfb;
     border: 1px solid #e7e7e7;
-    height: auto;
 }
+
 .navigation-menu__list {
     display: block;
     padding: 0;
@@ -34,6 +35,7 @@
     visibility: hidden;
     transition: all 0.1s ease-out;
 }
+
 .navigation-menu__list-item .navigation-menu__listitem-selected::before {
     content: '';
     position: absolute;
