@@ -64,6 +64,7 @@
     top: 97px;
     right: 0px;
     width: 186px;
+    background-color: #fff;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0, 0.2);
     border: 1px solid #484848;
 }
@@ -119,3 +120,4 @@
     top: 77px;
     transition: top 0.3s ease-in-out;
 }
+
