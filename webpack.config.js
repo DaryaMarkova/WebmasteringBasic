@@ -70,7 +70,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "src/img", to: "images" },
-      ],
+        { from: "src/detail.html", to: "detail.html" },
+      ]
     }),
     new HtmlWebpackPlugin({
       title: 'Extraodinary',
