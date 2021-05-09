@@ -1,7 +1,6 @@
 @import '~assets/scss/fonts.css';
 @import '~assets/scss/header.css';
 @import '~assets/scss/navigation_menu.css';
-@import '~assets/scss/news.css';
 
 body {
     margin: 0;
@@ -10,4 +9,9 @@ body {
 
 .container {
     position: relative;
+}
+
+.detail {
+    display: flex;
+    padding: 77px 90px;
 }
