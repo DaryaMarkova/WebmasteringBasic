@@ -1,0 +1,56 @@
+.detail-controls {
+    position:absolute;
+    top: 106px;
+    right: -70px;
+    width: 70px;
+    height: 198px;
+    border: 1px solid #ebebeb;
+}
+
+.detail-controls__button {
+    display: block;
+    width: 70px;
+    height: 66px;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+}
+.detail-controls__button {
+    position: relative;
+}
+.detail-controls__button:not(:last-of-type) {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.detail-controls__button.close::before {
+    position: absolute;
+    content: '';
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 16px;
+    background: url('assets/img/controls_icon.png') no-repeat;
+    background-position: left center;
+}
+
+.detail-controls__button.prev::before {
+    position: absolute;
+    content: '';
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 16px;
+    background: url('assets/img/controls_icon.png') no-repeat;
+    background-position: -20px center;
+}
+
+.detail-controls__button.next::before {
+    position: absolute;
+    content: '';
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 16px;
+    background: url('assets/img/controls_icon.png') no-repeat;
+    background-position: -38px center;
+}
