@@ -18,3 +18,54 @@ body {
     width: fit-content;
     padding: 106px 30px 0px 100px;
 }
+
+.detail-content {
+    width: 100%;
+    display: flex;
+    margin-top: 24px;
+    min-height: 200px;
+}
+
+.detail-content__leftcolumn {
+    width: 266px;
+}
+
+.detail-content__rightcolumn {
+    margin-left: 30px;
+    padding: 8px 10px;
+    width: calc(100% - 266px);
+}
+
+.detail-content__meta {
+    height: 60px;
+    padding: 0;
+    text-align: right;
+    font-size: 12px;
+    letter-spacing: -0.02em;
+}
+.detail-content__meta span {
+    display: block;
+}
+
+.detail-content__meta span:not(:first-of-type) {
+    margin-top: 4px;
+}
+
+.detail-content__meta span:nth-of-type(1) {
+    font-family: 'Montserrat-Bold';
+}
+
+.detail-content__meta span:nth-of-type(2) {
+    font-family: 'OpenSans';
+    font-size: 13px;
+}
+.detail-content__title {
+    margin: 0;
+    padding: 0;
+    white-space: pre-line;
+    font-size: 50px;
+    font-family: 'Montserrat-Bold';
+    letter-spacing: -0.03em;
+    line-height: 56px;
+    color: red;
+}
