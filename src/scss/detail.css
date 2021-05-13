@@ -27,50 +27,43 @@ body {
 }
 
 .detail-content__leftcolumn {
-    width: 266px;
-    /* margin-left: 7px;
-    margin-top: 2px; */
+    width: 272px;
 }
 
 .detail-content__rightcolumn {
-    margin-left: 30px;
+    margin-left: 24px;
     padding: 8px 13px;
     width: calc(100% - 266px);
 }
 
 .detail-content__meta {
-    height: 60px;
+    height: 54px;
+    margin-bottom: 16px;
     padding: 0;
     text-align: right;
     font-size: 12px;
     letter-spacing: -0.02em;
 }
 
+.detail-content__meta:not(:last-child) {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+
 .detail-content__meta span {
     display: block;
 }
 
 .detail-content__meta--key {
+    padding-top: 2px;
     font-family: 'Montserrat-Bold';
 }
+
 .detail-content__meta--value {
     font-family: 'OpenSans';
     font-size: 13px;
     line-height: 24px;
 }
-
-/* .detail-content__meta span:not(:first-of-type) {
-    margin-top: 4px;
-}
-
-.detail-content__meta span:nth-of-type(1) {
-    font-family: 'Montserrat-Bold';
-}
-
-.detail-content__meta span:nth-of-type(2) {
-    font-family: 'OpenSans';
-    font-size: 13px;
-} */
 
 .detail-content__title {
     margin: 0;
@@ -104,9 +97,49 @@ body {
     margin-top: 22px;
     color: #626262;
 }
+
 .detail-content__text--rightcolumn {
     margin-left: 30px;
 }
+
+.detail-content__sharebuttons {
+    margin-top: 12px;
+    width: fit-content;
+    float: right;
+}
+
+.detail-content__sharebutton {
+    width: 27px;
+    height: 27px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* .detail-content__sharebutton:not(:last-child) {
+    margin-right: 4px;
+} */
+
+.detail-content__sharebutton.facebook {
+    background: url('assets/img/share_icons.png') no-repeat;
+    background-position: -1px 0px;
+}
+
+.detail-content__sharebutton.twitter {
+    background: url('assets/img/share_icons.png') no-repeat;
+    background-position: -28px 0px; 
+}
+
+.detail-content__sharebutton.google {
+    background: url('assets/img/share_icons.png') no-repeat;
+    background-position: -55px 0px; 
+}
+
+.detail-content__sharebutton.pinterest {
+    background: url('assets/img/share_icons.png') no-repeat;
+    background-position: -82px 0px; 
+}
+
 
 .detail-content__text p {
     margin: 0;
