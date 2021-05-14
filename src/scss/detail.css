@@ -55,8 +55,9 @@ body {
 }
 
 .detail-content__meta--key {
-    padding-top: 2px;
-    font-family: 'Montserrat-Bold';
+    margin: 0 -2px;
+    font-family: 'OpenSans-Bold';
+    font-size: 13px;
 }
 
 .detail-content__meta--value {
@@ -103,9 +104,9 @@ body {
 }
 
 .detail-content__sharebuttons {
-    margin-top: 12px;
-    width: fit-content;
-    float: right;
+    width: 130px;
+    margin-top: 14px;
+    margin-left: calc(100% - 128px);
 }
 
 .detail-content__sharebutton {
@@ -116,9 +117,13 @@ body {
     cursor: pointer;
 }
 
-/* .detail-content__sharebutton:not(:last-child) {
-    margin-right: 4px;
-} */
+.detail-content__sharebutton:not(:last-child) {
+    margin-right: 3px;
+}
+
+.detail-content__sharebutton:first-child {
+    margin-right: 5px;
+}
 
 .detail-content__sharebutton.facebook {
     background: url('assets/img/share_icons.png') no-repeat;
@@ -139,7 +144,6 @@ body {
     background: url('assets/img/share_icons.png') no-repeat;
     background-position: -82px 0px; 
 }
-
 
 .detail-content__text p {
     margin: 0;

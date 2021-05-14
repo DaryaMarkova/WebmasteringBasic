@@ -27,3 +27,8 @@
     font-family: "OpenSans-Regular";
     src: url("assets/fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url("assets/fonts/open_sans/OpenSans-Bold.ttf") format("truetype");
+}
