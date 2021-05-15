@@ -32,3 +32,8 @@
     font-family: "OpenSans-Bold";
     src: url("assets/fonts/open_sans/OpenSans-Bold.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "OpenSans-ExtraBold";
+    src: url("assets/fonts/open_sans/OpenSans-ExtraBold.ttf") format("truetype");
+}
