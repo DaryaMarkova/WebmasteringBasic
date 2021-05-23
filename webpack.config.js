@@ -5,11 +5,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
 
 module.exports = {
-  entry: './src/index.js', 
+  entry: {
+    'index': './src/index.js',
+    'detail': './src/detail.js'
+  }, 
+  // output: {
+  //   filename: 'bundle.js',
+  //   path: path.resolve(__dirname, 'dist'),
+  //   publicPath: '/'
+  // },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    chunkFilename: '[id].[chunkhash].js'
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist')
@@ -65,18 +73,25 @@ module.exports = {
   },
   plugins: [
     new MiniCss({
-      filename: 'style.css',
+      filename: '[name].css',
     }),
     new CopyPlugin({
       patterns: [
         { from: "src/img", to: "images" },
-        { from: "src/detail.html", to: "detail.html" },
       ]
     }),
     new HtmlWebpackPlugin({
-      title: 'Extraodinary',
+      title: 'Extraordinary',
+      chunks: ['index'],
+      filename: 'index.html',
       template: path.resolve(__dirname, 'src', 'index.html')
     }),
+    new HtmlWebpackPlugin({
+      title: 'Extraordinary',
+      chunks: ['detail'],
+      filename: 'detail.html',
+      template: path.resolve(__dirname, 'src', 'detail.html')
+    })
     // new HotModuleReplacementPlugin()
   ],
   resolve: {
