@@ -17,6 +17,7 @@
     font-family: "OpenSans";
     src: url(fonts/OpenSans-Light.ttf) format("truetype");
 }
+
 .header {
     position: fixed;
     display: flex;
@@ -371,9 +372,9 @@
 
 .news-card__content--text {
     margin-top: 10px;
-    font-family: 'OpenSans';
-    font-size: 15px;
-    line-height: 23px;
+    font-family: 'OpenSans-Regular';
+    font-size: 14px;
+    line-height: 22px;
     letter-spacing: -0.02em;
     color: #626262;
 }
