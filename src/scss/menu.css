@@ -84,33 +84,99 @@
     margin-right: 23px;
 }
 
-.navigation-menu__list-item.graphic {
-    background: center no-repeat url('assets/img/palette_icon.png');
+.navigation-menu__list-item.graphic::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 18px;
+    top: calc(50% - 8px);
+    left: calc(50% - 11px);
+    background:  url('assets/img/menu_icons.png') no-repeat 0px center;
 }
-.navigation-menu__list-item.music {
-    background: center no-repeat url('assets/img/music_icon.png');
+
+.navigation-menu__list-item.music::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 18px;
+    top: calc(50% - 8px);
+    left: calc(50% - 9px);
+    background:  url('assets/img/menu_icons.png') no-repeat -24px center;
 }
-.navigation-menu__list-item.photography {
-    background: center no-repeat url('assets/img/camera_icon.png');
+
+.navigation-menu__list-item.photography::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    top: calc(50% - 9px);
+    left: calc(50% - 12px);
+    background:  url('assets/img/menu_icons.png') no-repeat -42px center;
 }
-.navigation-menu__list-item.cinema {
-    background: center no-repeat url('assets/img/video_icon.png');
+
+.navigation-menu__list-item.cinema::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    top: calc(50% - 9px);
+    left: calc(50% - 12px);
+    background:  url('assets/img/menu_icons.png') no-repeat -64px center;
 }
-.navigation-menu__list-item.business {
-    background: center no-repeat url('assets/img/suitcase_icon.png');
+
+.navigation-menu__list-item.business::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 18px;
+    top: calc(50% - 9px);
+    left: calc(50% - 11px);
+    background:  url('assets/img/menu_icons.png') no-repeat -86px center;
 }
-.navigation-menu__list-item.travel {
-    background: center no-repeat url('assets/img/airplane_icon.png');
+
+.navigation-menu__list-item.travel::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: calc(50% - 11px);
+    left: calc(50% - 11px);
+    background:  url('assets/img/menu_icons.png') no-repeat -108px center;
 }
-.navigation-menu__list-item.fashion {
-    background: center no-repeat url('assets/img/bag_icon.png');
+
+.navigation-menu__list-item.fashion::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: calc(50% - 11px);
+    left: calc(50% - 11px);
+    background:  url('assets/img/menu_icons.png') no-repeat -130px center;
 }
-.navigation-menu__list-item.more {
+
+.navigation-menu__list-item.more::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: calc(50% - 11px);
+    left: calc(50% - 11px);
+    background:  url('assets/img/menu_icons.png') no-repeat -154px center;
+}
+
+/* .navigation-menu__list-item.more {
     background: center no-repeat url('assets/img/plus_icon.png');
-}
-.navigation-menu__list-item.graphic {
-    background: center no-repeat url('assets/img/palette_icon.png');
-}
+} */
+
 .navigation-menu__list-item.settings {
     background: center no-repeat url('assets/img/settings_icon.png');
+}
+
+/*TODO: redefine background */
+.navigation-menu__list-item.music:hover::after{
+    background: none;
+}
+
+.navigation-menu__list-item.photography:hover::after {
+    background: none;
 }
