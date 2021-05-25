@@ -43,28 +43,6 @@
     height: 68px;
 }
 
-.navigation-menu__list-item.graphic .navigation-menu__listitem-selected::before {
-    background: center no-repeat url('assets/img/whitepalette_icon.png');
-}
-.navigation-menu__list-item.music .navigation-menu__listitem-selected::before {
-    background: center no-repeat url('assets/img/whitemusic_icon.png');
-}
-.navigation-menu__list-item.photography .navigation-menu__listitem-selected::before {
-    background: center no-repeat url('assets/img/whitecamera_icon.png');
-}
-.navigation-menu__list-item.travel .navigation-menu__listitem-selected::before {
-    background: center no-repeat url('assets/img/whiteairplane_icon.png');
-}
-.navigation-menu__list-item.fashion .navigation-menu__listitem-selected::before {
-    background: center no-repeat url('assets/img/whitebag_icon.png');
-}
-.navigation-menu__list-item.business .navigation-menu__listitem-selected::before {
-    background: center no-repeat url('assets/img/whitesuitcase_icon.png');
-}
-.navigation-menu__list-item.cinema .navigation-menu__listitem-selected::before {
-    background: center no-repeat url('assets/img/whitevideo_icon.png');
-}
-
 .navigation-menu__list-item:hover > .navigation-menu__listitem-selected  {
     visibility: visible;
     min-width: 135px;
@@ -73,15 +51,20 @@
     transition: all 0.3s ease-in;
 }
 
+.navigation-menu__list-item:hover .navigation-menu__listitem-selected--text {
+    visibility: visible;
+}
+
 .navigation-menu__listitem-selected--text {
     display: block;
     margin-left: 64px;
+    margin-right: 23px;
     color: #fff;
     text-transform: uppercase;
     line-height: 68px;
     font-family: "Montserrat-Bold";
     font-size: 14px;
-    margin-right: 23px;
+    visibility: hidden;
 }
 
 .navigation-menu__list-item.graphic::after {
@@ -164,19 +147,34 @@
     background:  url('assets/img/menu_icons.png') no-repeat -154px center;
 }
 
-/* .navigation-menu__list-item.more {
-    background: center no-repeat url('assets/img/plus_icon.png');
-} */
-
 .navigation-menu__list-item.settings {
     background: center no-repeat url('assets/img/settings_icon.png');
 }
 
-/*TODO: redefine background */
-.navigation-menu__list-item.music:hover::after{
-    background: none;
+.navigation-menu__list-item.graphic:hover::after {
+    background:  url('assets/img/white_menu_icons.png') no-repeat 0px center;
+}
+
+.navigation-menu__list-item.music:hover::after {
+    background:  url('assets/img/white_menu_icons.png') no-repeat -24px center;
 }
 
 .navigation-menu__list-item.photography:hover::after {
-    background: none;
+    background:  url('assets/img/white_menu_icons.png') no-repeat -42px center;
+}
+
+.navigation-menu__list-item.travel:hover::after {
+    background:  url('assets/img/white_menu_icons.png') no-repeat -108px center;
+}
+
+.navigation-menu__list-item.fashion:hover::after {
+    background:  url('assets/img/white_menu_icons.png') no-repeat -130px center;
+}
+
+.navigation-menu__list-item.business:hover::after {
+    background:  url('assets/img/white_menu_icons.png') no-repeat -86px center;
+}
+
+.navigation-menu__list-item.cinema:hover::after {
+    background:  url('assets/img/white_menu_icons.png') no-repeat -64px center;
 }
