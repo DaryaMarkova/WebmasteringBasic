@@ -199,7 +199,7 @@ body {
     right: 20px;
     width: 16px;
     height: 16px;
-    background: url('assets/img/star_icon.png') no-repeat center;
+    background: url('assets/img/icons.png') no-repeat -34px 0px;
 }
 
 .detail-comments__iconcount {
@@ -393,15 +393,12 @@ body {
 
 .detail-comments__listitem--caretdown {
     margin-left: 2px;
-    background: url('assets/img/updown_icons.png') no-repeat;
-    background-position: 1px 2px;
+    background: url('assets/img/icons.png') -52px -3px no-repeat;
 }
 
 .detail-comments__listitem--caretup {
-    background: url('assets/img/updown_icons.png') no-repeat;
-    background-position: -7px 2px;
+    background: url('assets/img/icons.png') -60px -3px no-repeat;
 }
-
 .detail-comments__listitem--action {
     position: relative;
     margin-left: 14px;
@@ -441,7 +438,7 @@ body {
     width: 16px;
     height: 14px;
     margin-right: 10px;
-    background: url('assets/img/footer_icons.png') no-repeat;
+    background:  url('assets/img/icons.png') no-repeat -70px 0px;
 }
 .detail-comments__footer-action--subscribe {
     margin-left: 16px;
@@ -454,6 +451,5 @@ body {
     width: 18px;
     height: 14px;
     margin-right: 10px;
-    background: url('assets/img/footer_icons.png') no-repeat;
-    background-position: -16px 0px;
+    background:  url('assets/img/icons.png') no-repeat -87px 0px;
 }

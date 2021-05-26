@@ -90,17 +90,26 @@
 }
 
 .news-card__content--date::before {
-    content: url('assets/img/calendar_icon.png');
+    content: '';
     position: absolute;
     top: 2px;
     left: -16px;
+    width: 14px;
+    height: 17px;
+    background-image: url('assets/img/icons.png');
+    background-position: -2px 0px;
+    overflow: hidden;
 }
 
 .news-card__content--comment::before {
-    content: url('assets/img/comment_icon.png');
+    content: '';
+    background-image: url('assets/img/icons.png');
+    background-position: -18px 0px;
     position: absolute;
     top: 2px;
     left: -22px;
+    width: 14px;
+    height: 17px;
 }
 
 .news-card__content--title {
