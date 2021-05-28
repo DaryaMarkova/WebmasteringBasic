@@ -146,9 +146,14 @@
     left: calc(50% - 11px);
     background:  url('assets/img/menu_icons.png') no-repeat -154px center;
 }
-
-.navigation-menu__list-item.settings {
-    background: center no-repeat url('assets/img/settings_icon.png');
+.navigation-menu__list-item.settings::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    background: url('assets/img/icons.png') no-repeat 0px -38px;
 }
 
 .navigation-menu__list-item.graphic:hover::after {

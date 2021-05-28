@@ -29,8 +29,7 @@
     left: calc(50% - 8px);
     width: 16px;
     height: 16px;
-    background: url('assets/img/controls_icon.png') no-repeat;
-    background-position: left center;
+    background: url('assets/img/icons.png') -108px 0px;
 }
 
 .detail-controls__button.prev::before {
@@ -40,8 +39,7 @@
     left: calc(50% - 8px);
     width: 16px;
     height: 16px;
-    background: url('assets/img/controls_icon.png') no-repeat;
-    background-position: -20px center;
+    background: url('assets/img/icons.png') -128px 0px;
 }
 
 .detail-controls__button.next::before {
@@ -51,6 +49,5 @@
     left: calc(50% - 8px);
     width: 16px;
     height: 16px;
-    background: url('assets/img/controls_icon.png') no-repeat;
-    background-position: -38px center;
+    background: url('assets/img/icons.png') -144px 0px;
 }

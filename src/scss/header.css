@@ -37,6 +37,7 @@
     line-height: 77px;
     color: #fff;
 }
+
 .header-section__share-menu {
     position: absolute;
     box-sizing: border-box;
@@ -46,15 +47,39 @@
     box-shadow: 2px 2px 2px 0px rgba(0,0,0, 0.2);
     border: 1px solid #484848;
 }
+
 .header-section__search {
+    position: relative;
     box-sizing: content-box;
     padding: 0px 40px;
-    background: center no-repeat url('assets/img/search_icon.png');
     border-right: 1px solid rgba(82, 82, 82, 0.2);
 }
+
+.header-section__search::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: calc(50% - 12px);
+    left:  calc(50% - 12px);
+    overflow: hidden;
+    background: url('assets/img/icons.png') -88px -16px;
+}
+
 .header-section__login {
-    padding: 40px;
-    background: center no-repeat url('assets/img/user_icon.png');
+    position: relative;
+    padding: 0px 40px;
+}
+
+.header-section__login::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: calc(50% - 12px);
+    left:  calc(50% - 12px);
+    overflow: hidden;
+    background: url('assets/img/icons.png') -112px -16px; 
 }
 
 .header-section__share-menu {
