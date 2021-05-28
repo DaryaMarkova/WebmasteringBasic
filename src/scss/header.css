@@ -8,9 +8,11 @@
     background-color: #242525;
     z-index: 1000;
 }
+
 .header-section {
     align-self: stretch;
 }
+
 .header-section.active {
     cursor: pointer;
     background-color: #1b1c1c;
@@ -27,14 +29,15 @@
     text-transform: uppercase;
     color: #fff;
 }
+
 .header-section__share {
     position: relative;
     padding: 0px 28px;
     font-family: 'Montserrat-Bold'; 
     font-size: 14px;
-    font-weight: bold;
     text-transform: uppercase;
-    line-height: 77px;
+    line-height: 79px;
+    letter-spacing: -0.02em;
     color: #fff;
 }
 
